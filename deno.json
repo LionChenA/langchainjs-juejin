@@ -4,9 +4,9 @@
     "dotenv": "https://deno.land/std@0.220.0/dotenv/mod.ts",
     "langchain": "npm:/langchain@0.1.29",
     "langchain/": "npm:/langchain@0.1.29/",
-    "@langchain/openai": "npm:/@langchain/openai@0.0.22",
+    "@langchain/openai": "npm:@langchain/openai@^0.4.4",
     "@langchain/openai/": "npm:/@langchain/openai@0.0.22/",
-    "@langchain/core": "npm:/@langchain/core@0.1.48",
+    "@langchain/core": "npm:@langchain/core@^0.3.42",
     "@langchain/core/": "npm:/@langchain/core@0.1.48/",
     "zod": "npm:/zod",
     "pdf-parse": "npm:/pdf-parse/lib/pdf-parse.js",
@@ -16,8 +16,30 @@
     "@lancedb/lancedb": "npm:/@lancedb/lancedb",
     "@langchain/community/": "npm:/@langchain/community/",
     "faiss-node": "npm:/faiss-node",
-    "openai": "npm:/openai",
+    "openai": "npm:openai@^4.86.1",
     "zod-to-json-schema": "npm:/zod-to-json-schema"
   },
-  "deno.enable": true
+  "deno.enable": true,
+  "nodeModulesDir": "auto",
+  "moduleResolution": "bundler",
+  "allowJs": false,
+
+  "lint": {
+    "files": {
+      "exclude": ["*.ipynb"]
+    },
+    "options": {
+      "semiColons": false,
+      "singleQuote": true
+    }
+  },
+  "fmt": {
+    "files": {
+      "exclude": ["*.ipynb"]
+    },
+    "options": {
+      "semiColons": false,
+      "singleQuote": false
+    }
+  }
 }

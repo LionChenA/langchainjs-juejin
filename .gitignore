@@ -1,3 +1,13 @@
-.ipynb_checkpoints
-.env
-node_modules
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+*.code-workspace
+
+# Jupyter
+.jupyter/
+.ipynb_checkpoints/
+
+# Node
+node_modules/
